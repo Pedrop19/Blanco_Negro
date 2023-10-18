@@ -7,6 +7,7 @@ let draggedElement = null;
 
 imgElements.forEach(element => {
     element.addEventListener('drop', DropElement);
+    element.addEventListener('dragover', DragOverElemento);
 });
 
 cambioElements.forEach(element => {
@@ -37,3 +38,8 @@ function DropElement(evento) {
 
     draggedElement = null; 
 }
+
+function DragOverElemento(evento) {
+    evento.preventDefault();
+    console.log("dragover");
+  }

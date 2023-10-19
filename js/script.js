@@ -17,7 +17,7 @@ cambioElements.forEach(element => {
 
 function DragElement(evento) {
     console.log("drag" + this);
-    draggedElement = evento.target; 
+    draggedElement = evento.target;
 }
 
 
@@ -25,6 +25,7 @@ function DropElement(evento) {
     evento.preventDefault();
     console.log("drop" + this);
     console.log("evento: " + evento);
+
 
     let isTargetInImages = Array.from(imgElements).includes(evento.target);
 
